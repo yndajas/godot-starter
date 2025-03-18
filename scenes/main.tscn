@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://bkxxpoxcv556r"]
+[gd_scene load_steps=10 format=4 uid="uid://bkxxpoxcv556r"]
 
 [ext_resource type="Texture2D" uid="uid://bt55x5s0bng2g" path="res://assets/images/tilemap.png" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://cx2ye2o2jofum" path="res://assets/images/unsorted_kenney.nl/Tiles/Transparent/tile_0245.png" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://bw6fdxcxsqkew" path="res://scripts/player.gd" id="2_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c68d6wtjlevl" path="res://assets/images/unsorted_kenney.nl/Tiles/Transparent/tile_0241.png" id="3_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://dekqnxllibd8e" path="res://assets/images/unsorted_kenney.nl/Tiles/Transparent/tile_0240.png" id="4_tefeu"]
 
@@ -464,6 +465,7 @@ tile_set = SubResource("TileSet_0wfyh")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(94, 313)
+script = ExtResource("2_tbgi4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_o6xl0")
