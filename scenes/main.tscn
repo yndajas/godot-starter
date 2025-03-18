@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://bkxxpoxcv556r"]
+[gd_scene load_steps=9 format=4 uid="uid://bkxxpoxcv556r"]
 
 [ext_resource type="Texture2D" uid="uid://bt55x5s0bng2g" path="res://assets/images/tilemap.png" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://cx2ye2o2jofum" path="res://assets/images/unsorted_kenney.nl/Tiles/Transparent/tile_0245.png" id="2_jyhfs"]
@@ -452,13 +452,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jyhfs"]
+radius = 5.0
+height = 10.0
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAADABQAAAAHAAQAAAADABUAAAAHAAUAAAADABYAAAAHAAYAAAAIABQAAAAJAAQAAAAIABUAAAAJAAUAAAAIABYAAAAJAAYAAAAEABQAAAAIAAQAAAAEABUAAAAIAAUAAAAEABYAAAAIAAYAAAAFABQAAAAIAAQAAAAFABUAAAAIAAUAAAAFABYAAAAIAAYAAAAGABQAAAAIAAQAAAAGABUAAAAIAAUAAAAGABYAAAAIAAYAAAAHABQAAAAIAAQAAAAHABUAAAAIAAUAAAAHABYAAAAIAAYAAAAKABQAAAAEAAMAAAALABQAAAAFAAMAAAAMABQAAAAGAAMAAAAOABMAAAAEAAMAAAAPABMAAAAFAAMAAAAQABMAAAAGAAMAAAASABIAAAADAAMAAAAUABIAAAADAAMAAAAWABIAAAADAAMAAAAZABIAAAAHAAQAAAAZABMAAAAHAAUAAAAZABQAAAAHAAYAAAAaABIAAAAIAAQAAAAaABMAAAAIAAUAAAAaABQAAAAIAAYAAAAbABIAAAAJAAQAAAAbABMAAAAJAAUAAAAbABQAAAAJAAYAAAAaABAAAAAOAAAAAAAaABEAAAAOAAEAAAA=")
 tile_set = SubResource("TileSet_0wfyh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(94, 313)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_o6xl0")
 animation = &"stand"
 frame_progress = 0.237177
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_jyhfs")
