@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://bkxxpoxcv556r"]
+[gd_scene load_steps=11 format=4 uid="uid://bkxxpoxcv556r"]
 
 [ext_resource type="Texture2D" uid="uid://bt55x5s0bng2g" path="res://assets/images/tilemap.png" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://fukcw2qngvds" path="res://scripts/main.gd" id="1_tefeu"]
 [ext_resource type="Texture2D" uid="uid://cx2ye2o2jofum" path="res://assets/images/unsorted_kenney.nl/Tiles/Transparent/tile_0245.png" id="2_jyhfs"]
 [ext_resource type="Script" uid="uid://bw6fdxcxsqkew" path="res://scripts/player.gd" id="2_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c68d6wtjlevl" path="res://assets/images/unsorted_kenney.nl/Tiles/Transparent/tile_0241.png" id="3_tbgi4"]
@@ -458,6 +459,7 @@ radius = 5.0
 height = 10.0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_tefeu")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAADABQAAAAHAAQAAAADABUAAAAHAAUAAAADABYAAAAHAAYAAAAIABQAAAAJAAQAAAAIABUAAAAJAAUAAAAIABYAAAAJAAYAAAAEABQAAAAIAAQAAAAEABUAAAAIAAUAAAAEABYAAAAIAAYAAAAFABQAAAAIAAQAAAAFABUAAAAIAAUAAAAFABYAAAAIAAYAAAAGABQAAAAIAAQAAAAGABUAAAAIAAUAAAAGABYAAAAIAAYAAAAHABQAAAAIAAQAAAAHABUAAAAIAAUAAAAHABYAAAAIAAYAAAAKABQAAAAEAAMAAAALABQAAAAFAAMAAAAMABQAAAAGAAMAAAAOABMAAAAEAAMAAAAPABMAAAAFAAMAAAAQABMAAAAGAAMAAAASABIAAAADAAMAAAAUABIAAAADAAMAAAAWABIAAAADAAMAAAAZABIAAAAHAAQAAAAZABMAAAAHAAUAAAAZABQAAAAHAAYAAAAaABIAAAAIAAQAAAAaABMAAAAIAAUAAAAaABQAAAAIAAYAAAAbABIAAAAJAAQAAAAbABMAAAAJAAUAAAAbABQAAAAJAAYAAAAaABAAAAAOAAAAAAAaABEAAAAOAAEAAAA=")
